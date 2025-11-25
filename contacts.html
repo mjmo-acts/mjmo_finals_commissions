@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      h1{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 100px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+
+      h3{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        border-bottom: 2px solid #6a1d36;
+        padding-bottom: 50px;
+        display: inline-block;
+        width: 450px;
+        margin: 0 auto;
+      }
+
+      .contactsss {
+        text-align: center;
+        color:#6a1d36
+      }
+
+      h5 {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #6a1d36;
+        font-size: 35px;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      }
+
+      .section-box {
+        padding: 40px;
+      }
+
+      .section-box h5 {
+        margin-bottom: 20px;
+      }
+
+      .section-box ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .section-box ul li {
+        margin-bottom: 10px;
+      }
+
+      .section-box ul li a {
+        text-decoration: none;
+        color: rgb(193, 115, 141);
+      }
+
+      .navbar-light .navbar-toggler-icon {
+        filter: invert(1);
+      }
+
+      .navbar-light .navbar-toggler:hover {
+        background-color: rgba(255,255,255,0.1);
+      }
+
+      .navbar-nav .nav-link {
+       color: white;
+       transition: color 0.3s;
+      }
+
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link:focus {
+        text-decoration: underline;
+      }
+    </style>
+</head>
+
+<body>
+<body>
+<nav class="navbar navbar-expand-xl navbar-light" style="background-color: #6a1d36;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="./index.html">MO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link text-white" href="./index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./aboutus.html">About Me</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="./contacts.html">Contacts</a></li>
+        <li class="nav-item">
+          <span id="datetime" class="nav-link text-white"></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function updateDateTime() {
+    const now = new Date();
+    const dateTimeString = now.toLocaleString();
+    document.getElementById('datetime').textContent = dateTimeString;
+  }
+
+  updateDateTime();
+  setInterval(updateDateTime, 1000);
+</script>
+
+<div class="contactsss">
+    <h1>Contacts</h1>
+    <h3>For more information, just reach out to me!</h3>
+</div>
+
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col-md-6 text-center section-box">
+      <h5>Socials</h5>
+      <ul>
+        <li class="Socials"><a href="#">Twitter</a></li>
+        <li class="Socials"><a href="#">Facebook</a></li>
+        <li class="Socials"><a href="#">Instagram</a></li>
+        <li class="Socials"><a href="#">Discord</a></li>
+      </ul>
+    </div>
+    <div class="col-md-6 text-center section-box">
+      <h5>Emails</h5>
+      <ul>
+        <li class="Socials"><a href="#">Email 1</a></li>
+        <li class="Socials"><a href="#">Email 2</a></li>
+        <li class="Socials"><a href="#">Email 3</a></li>
+        <li class="Socials"><a href="#">Discord</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="container">
+  <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+
+    <p class="col-md-4 mb-0 text-body-secondary">
+      © 2025 MJMO, Inc
+    </p>
+
+    <a href="/"
+       class="col-md-4 d-flex justify-content-center align-items-center mb-3 mb-md-0 link-body-emphasis text-decoration-none"
+       aria-label="Bootstrap">
+      <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+    </a>
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+        <li class="nav-item"><a href="./aboutus.html" class="nav-link px-2 text-body-secondary">About Me</a></li>
+      <li class="nav-item"><a href="./services.html" class="nav-link px-2 text-body-secondary">Services</a></li>
+      <li class="nav-item"><a href="./contacts.html" class="nav-link px-2 text-body-secondary">Contacts</a></li>
+    </ul>
+
+  </div>
+</footer>
+</body>
+</html>
